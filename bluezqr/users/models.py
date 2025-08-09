@@ -1,0 +1,30 @@
+from django.db import models
+
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    mobile = models.CharField(max_length=15)
+    alternate_mobile = models.CharField(max_length=15)
+    degree = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    college_name = models.CharField(max_length=200)
+    area = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    passout_year = models.IntegerField()
+    percentage = models.FloatField()
+    resume = models.FileField(upload_to='resumes/students/')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class Candidate(models.Model):
+    name = models.CharField(max_length=100)
+    mobile = models.CharField(max_length=15)
+    alternate_mobile = models.CharField(max_length=15)
+    branch = models.CharField(max_length=100)
+    degree = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+    area = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    passout_year = models.IntegerField()
+    experience_years = models.IntegerField()
+    experience_details = models.TextField()
+    resume = models.FileField(upload_to='resumes/candidates/')
+    created_at = models.DateTimeField(auto_now_add=True)
