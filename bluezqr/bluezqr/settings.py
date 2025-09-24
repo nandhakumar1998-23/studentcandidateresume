@@ -52,7 +52,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # CORS allowed origins
 CORS_ALLOWED_ORIGINS = [
-    "https://bluezapplication.netlify.app",  # Update with your frontend URL
+    # "https://bluezapplication.netlify.app",
+    "https://bluezcareer.netlify.app", 
+    "https://bluezapplication.netlify.app",
 ]
 
 # REST Framework + JWT Authentication
