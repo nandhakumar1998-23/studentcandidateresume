@@ -26,7 +26,7 @@ const StudentRegister = () => {
     Object.entries(formData).forEach(([key, value]) => data.append(key, value));
 
     try {
-      await axios.post('https://bluezapi.onrender.com/api/students/', data, {
+      await axios.post('https://studentcandidateresume.onrender.com/api/students/', data, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert("✅ Registered Successfully");
